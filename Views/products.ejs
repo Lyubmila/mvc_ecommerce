@@ -10,6 +10,10 @@
     <h1><%= productsPage %></h1>
     <% data.map((product, index) => { %>
         <li>
+            <% if (product.images != undefined) { %>
+            <img src= <%= product.images[0]%> />
+            <% } %>
+            
             <%= product.title %> is price
             <%= product.price %> and it is
             <%= product.description  %>

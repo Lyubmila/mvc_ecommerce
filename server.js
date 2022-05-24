@@ -50,7 +50,7 @@ app.post('/products', (req, res) => {
 app.get('/products/:id', (req, res) =>{
     console.log(req.params);
 
-    const result = products.filter(item => item.id === Number(req.params.id))
+    const result = products.filter(item => item.id === Number(req.params.id)) //from array product take id and === with id on the page
     // console.log(result)
     res.render('searchProduct', {pageHeader: 'Product Details', data:result[0]})
     
